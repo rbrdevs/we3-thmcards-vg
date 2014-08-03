@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>THMcards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Daniel Knapp, Jan Kammer" />
+
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/welcome.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" style="width:700px">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"><img src="/img/card_logo_welcome.png" height="45" /></h4>
+          </div>
+          <div class="modal-body">
+
+
+            <div id="carousel-generic" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-generic" data-slide-to="0" class="active" style="color:#000"></li>
+                <li data-target="#carousel-generic" data-slide-to="1" style="color:#000"></li>
+                <li data-target="#carousel-generic" data-slide-to="2" style="color:#000"></li>
+                <li data-target="#carousel-generic" data-slide-to="3" style="color:#000"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img alt="Second slide" src="img/carousel0.jpg">
+                  <div class="carousel-caption" style="color:#000">
+                    <h3 data-i18n="carousel-inner.carousel-header-0"></h3>
+                    <p data-i18n="carousel-inner.carousel-paragraph-0"></p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img alt="Second slide" src="img/carousel1.jpg">
+                  <div class="carousel-caption" style="color:#000">
+                    <h3 data-i18n="carousel-inner.carousel-header-1"></h3>
+                    <p data-i18n="carousel-inner.carousel-paragraph-1"></p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img alt="Second slide" src="img/carousel2.jpg">
+                  <div class="carousel-caption" style="color:#000">
+                    <h3 data-i18n="carousel-inner.carousel-header-2"></h3>
+                    <p data-i18n="carousel-inner.carousel-paragraph-2"></p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img alt="Second slide" src="img/carousel3.jpg">
+                  <div class="carousel-caption" style="color:#000; border:1px">
+                    <h3 data-i18n="carousel-inner.carousel-header-3"></h3>
+                    <p data-i18n="carousel-inner.carousel-paragraph-3"></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-generic" data-slide="prev" style="color:#000;background-image:none">
+                <span class="glyphicon glyphicon-chevron-left" style=""></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-generic" data-slide="next" style="color:#000;background-image:none">
+                <span class="glyphicon glyphicon-chevron-right" style="background-image:none"></span>
+              </a>
+            </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="intro">
+      <img src="/img/card_logo_welcome.png" alt="THMcards Logo" />
+      <span class="slogan">
+      <h2 class="pull-left">Create.</h2><h2 class="pull-left lmargin">Learn.</h2><h2 class="pull-left lmargin">Share.</h2>
+    </span>
+
+    <div class="login">
+      <hr />
+      <a class="btn btn-success btn-about" data-toggle="modal" data-target="#myModal" style="margin:18px 0 35px; display:inline-block" data-i18n="intro.about"></a>
+      <div>
+        <span class="text-muted" data-i18n="intro.choose"></span><br /><br />
+        <a href="/auth/facebook"><img src="img/social_facebook_box_white.png" /></a>
+        <a href="/auth/twitter" style="margin:0 30px"><img src="img/social_twitter_box_white.png"/></a>
+        <a href="/auth/google"><img src="img/social_google_box_white.png" /></a>
+      </div>
+    </div>
+    <a href="/impressum" class="text-muted" style="margin-top:70px; display:inline-block" data-i18n="intro.impressum"></a>
+    </div>
+    <script type="text/javascript" src="/javascripts/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/javascripts/lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/javascripts/lib/i18next-1.7.3.min.js"></script>
+    <script type="text/javascript" src="/javascripts/lib/moment-with-langs.min.js"></script>
+    <script type="text/javascript" src="/javascripts/translation.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('.carousel').carousel();
+    });
+    </script>
+  </body>
+</html>

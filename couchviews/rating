@@ -1,0 +1,18 @@
+{
+   "_id": "_design/rating",
+   "language": "javascript",
+   "views": {
+       "by_set": {
+           "map": "function(doc) { if (doc.type == 'rating') { emit([doc.setId], doc); } }"
+       },
+       "by_owner": {
+           "map": "function(doc) { if (doc.type == 'rating') { emit([doc.owner], doc); } }"
+       },
+       "by_id": {
+           "map": "function(doc) { if (doc.type == 'rating') { emit([doc._id], doc); }}"
+       },
+       "by_set_owner": {
+           "map": "function(doc) { if (doc.type == 'rating') { emit([doc.setId, doc.owner], doc); }}"
+       }
+   }
+}

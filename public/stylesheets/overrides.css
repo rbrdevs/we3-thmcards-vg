@@ -1,0 +1,754 @@
+html,
+body {
+  height: 100%;
+  background-image: url('/img/light_wool.png');
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2) {
+      body {
+          background: url('/img/light_wool@2X.png') no-repeat;
+          background-size: 410px 410px;
+      }
+}
+
+code {
+  background-color: transparent !important;
+  padding: 0 !important;
+  white-space: normal !important;
+  color: #000 !important;
+}
+
+#main {
+  margin: 10px 0;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -30px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+  height: 60px;
+}
+#footer {
+  background-color: #F8F8F8;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+hr {
+  margin: 10px 0;
+}
+
+#wrap &gt; .container {
+  padding-top: 60px;
+}
+.container .credit {
+  margin: 20px 0;
+}
+
+code {
+  font-size: 80%;
+}
+
+.navbar .divider-vertical {
+    background-color: #D3D6DD;
+    border-right: 1px solid rgba(255, 255, 255, 0.9);
+    height: 40px;
+    margin: 0 20px;
+    overflow: hidden;
+    width: 1px;
+}
+
+.navbar li input {
+  margin-top: 8px;
+}
+
+.navbar li.dropdown {
+  margin-left:8px;
+}
+
+.navbar li.dropdown {
+  min-width: 150px;
+}
+
+.boxsizingBorder {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.not-there {
+  display: none;
+}
+
+.special a {
+  color :#f1961d;
+}
+.document {
+  height : 80px;
+  width : 120px;
+  overflow:hidden;
+  border-left: solid 9px #767e49;
+}
+.document p{
+  line-height: 80px;
+  vertical-align: middle;
+  text-align: center;
+}
+#ed {
+  height : 75%;
+  width : 49%;
+  border: 1px solid #ccc;
+}
+#document-summary-list{
+  list-style-image:url('/img/document-small.png');
+}
+#document-summary-list li{
+  overflow : hidden;
+}
+
+.table th, .table td {
+  background-color: #fff;
+}
+
+.box
+{
+  border: 1px solid #DDDDDD;
+  font-family:'Georgia', serif;
+  position: relative;
+  height: 278px;
+  padding: 50px;
+  margin: 0 auto;
+  background-color: #fff;
+  background-image: url('/img/card_background.png');
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.box:before, .box:after
+{
+  position: absolute;
+  width: 40%;
+  height: 10px;
+  content: ' ';
+  left: 12px;
+  bottom: 12px;
+  background: transparent;
+  -webkit-transform: skew(-5deg) rotate(-5deg);
+  -moz-transform: skew(-5deg) rotate(-5deg);
+  -ms-transform: skew(-5deg) rotate(-5deg);
+  -o-transform: skew(-5deg) rotate(-5deg);
+  transform: skew(-5deg) rotate(-5deg);
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+.box:after
+{
+  left: auto;
+  right: 12px;
+  -webkit-transform: skew(5deg) rotate(5deg);
+  -moz-transform: skew(5deg) rotate(5deg);
+  -ms-transform: skew(5deg) rotate(5deg);
+  -o-transform: skew(5deg) rotate(5deg);
+  transform: skew(5deg) rotate(5deg);
+}
+
+#cardCarousel .carousel-indicators{
+  bottom: 0px;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+    height: 150px;
+    margin-top: 65px;
+}
+
+.carousel-inner {
+  min-height: 278px;
+}
+.carousel-control {
+  color: #000;
+  width: 7%;
+}
+
+/*#cardCarousel ol.carousel-indicators {
+  left: 120px;
+  top: 15px;
+}
+
+#cardCarousel ol.carousel-indicators li.active {
+  background-color: #000;
+}
+
+#cardCarousel ol.carousel-indicators li {
+  background-color: #c0c0c0;
+}*/
+
+/* This parent can be any width and height */
+.block {
+  text-align: center;
+  height: 100%;
+}
+.memocontent-block {
+  width: 380px;
+  margin-left: -0.9em;
+}
+/* The ghost, nudged to maintain perfect centering */
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+/* The element to be centered, can
+   also be of any width and height */ 
+
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 580px;
+  font-size: 1.2em;
+}
+.double {
+  display: inline-block;
+  vertical-align: middle;
+  width: 380px;
+  font-size: 1.1em;
+  line-height: 1.3em;
+}
+
+.navbar .navbar-brand {
+  padding: 10px 20px;
+}
+
+.navbar .navbar-brand img {
+  width: 142px;
+  height: 30px;
+}
+
+.nav-header {
+display: block;
+padding: 3px 15px;
+font-size: 11px;
+font-weight: bold;
+line-height: 20px;
+color: #999999;
+text-shadow: 0 1px 0 
+rgba(255, 255, 255, 0.5);
+text-transform: uppercase;
+}
+
+ul.nav-list li.active {
+  font-weight: bold;
+}
+.back, .front {
+  line-height: 1.3em;
+}
+.clicktoflip {
+  color:#666; 
+  position: absolute; 
+  right: 10px; 
+  top: 13px; 
+  font-style: italic;
+}
+.memo-setname {
+  color:#666; 
+  position: absolute; 
+  left: 111px; 
+  top: 13px;
+  width: 220px;
+  text-align: center;
+}
+img.cardside {
+  position: absolute; 
+  right: 88px; 
+  top: 13px; 
+}
+img.memoback {
+  position: absolute; 
+  right: 78px; 
+  top: 13px; 
+}
+.btn-editCard {
+  position: absolute; 
+  left: 12px; 
+  top: 11px; 
+}
+
+.btn-showPictureModal {
+  position: absolute; 
+  left: 10px; 
+  top: 11px; 
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.btn-showPictureDetails {
+  left: 45px!important; 
+}
+
+.carousel-control {
+    z-index: 5;
+}
+
+.carousel-inner {
+  /** border: 1px solid #DDDDDD; **/
+  border-radius: 4px;
+}
+
+.carousel-control:hover {
+  opacity: 0.5;
+}
+
+.carousel-itemcnt {
+  bottom: 0; 
+  height: 20px; 
+  position: absolute; 
+  color: #000; 
+  font-family: 'Georgia', serif; 
+  text-align: center; 
+  width: 100%; 
+  z-index: 1;
+}
+
+.learn-cardHelptext {
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  font-family: 'Georgia', serif;
+}
+
+div.learnbox-success {
+  font-size: 2em;
+  margin-top:- 50px
+}
+
+div.learnbox-choose-message {
+  font-size: 1.2em;
+  width: 500px;
+  margin-top: -95px;
+}
+
+a.learn-back {
+  margin-top: -38px
+}
+
+.box-indicator {
+  margin-top: 2px;
+}
+
+.memo-cardHelptext {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  margin-top: 30px;
+  margin-left: -135px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  font-family: 'Georgia', serif;
+}
+
+.memo-toolbar {
+  margin-top: 50px;
+  margin-left: 3px;
+  float: left;
+}
+
+div.memo-rating {
+  margin-top:20px;
+  margin-left:433px;
+  position:absolute;
+}
+
+button.show-answer {
+  width: 413px;
+  margin-top: 20px;
+  margin-left: 260px;
+  display: none;
+  position: absolute;
+  align: center;
+}
+
+button.rate-answer.wrong {
+  color: #DF0101;
+}
+
+.tooltip-inner {
+  background-color: #F8F8F8;
+  color: #666;
+  border: 1px solid #D3D6DD;
+}
+
+.popover-content {
+  display: block;
+  width: 280px!important;
+}
+
+.hljs {
+  background: none;
+}
+
+.emptyCellList {
+  padding-top: 33px!important;
+}
+
+.emptyTextList {
+  color: #666;
+  font-style: italic;
+  font-family: 'Georgia', serif;
+}
+
+.btn-newSet{
+  margin-top: 20px;
+  margin-bottom: 27px;
+}
+
+#google-imagesearch-result {
+  width: 100%;
+  text-align: center;
+  margin-left:10px;
+}
+
+#google-imagesearch-result img {
+  margin: 5px;
+  cursor: pointer;
+}
+
+div.img-tb-container {
+  width: 350px;
+  height: 260px;
+  float:left;
+}
+
+#set-details-newcard-input-pic-front-search, #set-details-newcard-input-pic-back-search {
+  /*width:300px;*/
+}
+
+
+#meteor-pitch {
+  border: 1px solid #E0E0E0;
+  border-radius: 3px 3px 3px 3px;
+  overflow:hidden;
+  width: 100%; 
+  height: 500px; 
+  background-color: #fff;
+  background-image:url('/img/meteor-background.jpg');
+}
+
+div.meteor-playcard {
+  color: #fff; 
+  text-align: center; 
+  border-radius: 5px;
+  background-color: #F9F9F9;
+  background-image:url('/img/meteor-card.jpg');
+  border: 1px solid #000;
+  position: absolute;
+  padding: 5px;
+  width: 100px;
+}
+
+#meteor-countdown {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#meteor-countdown span {
+  font-size: 10em;
+  font-family: 'Black Ops One', cursive;
+  color: #000;
+}
+
+#meteor-countdown .meteor-countdown-back {
+  width: 918px; 
+  height: 498px; 
+  position:absolute; 
+  z-index:9; 
+  -moz-opacity: 0.50;
+  opacity: 0.50;
+  background-color: #fff;
+}
+
+#meteor-countdown .meteor-welcome-front {
+  position:absolute; 
+  z-index:10; 
+  width:920px; 
+  padding-top:40px; 
+  height: 500px
+}
+
+#meteor-countdown .meteor-welcome-description {
+  margin: 0 auto 40px; 
+  width: 70%
+}
+
+#meteor-statistics {
+  position: absolute;
+  width: 920px;
+  height: 30px;
+  z-index: 12;
+  margin-top: 5px;
+}
+
+#meteor-lifes {
+  width: 33%;
+  float:left;
+  text-align: left;
+  font-size: 2em;
+  color: #000;
+  padding-left: 25px;
+}
+
+#meteor-lifes span { 
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#meteor-level {
+  width: 34%;
+  float:left;
+  text-align: center;
+  font-family: 'Black Ops One', cursive;
+  font-size: 2em;
+  color: #000;
+}
+
+#meteor-points {
+  width: 33%;
+  float:left;
+  text-align: right;
+  font-family: 'Black Ops One', cursive;
+  font-size: 2em;
+  color: #000;
+  padding-right: 25px;
+}
+
+.twitter-typeahead {
+    width: 100%;
+    position: relative;
+}
+
+.twitter-typeahead .tt-query,
+.twitter-typeahead .tt-hint {
+    margin-bottom: 0;
+    width: 100%;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.twitter-typeahead .tt-hint {
+    color: #a1a1a1;
+    z-index: 1;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+}
+
+.twitter-typeahead .tt-query {
+    z-index: 2;
+    border-radius: 4px !important;
+}
+
+.input-group-addon + .twitter-typeahead > .tt-query {
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+}
+
+.input-group-appended > .twitter-typeahead > .tt-query {
+    border-top-right-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+}
+
+.tt-dropdown-menu {
+    min-width: 160px;
+    margin-top: 2px;
+    padding: 5px 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
+.tt-suggestion {
+    display: block;
+    padding: 3px 20px;
+}
+
+.tt-suggestion.tt-is-under-cursor {
+    color: #fff;
+    background-color: #0081c2;
+    background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
+    background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
+    background-image: -o-linear-gradient(top, #0088cc, #0077b3);
+    background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0)
+}
+
+.tt-suggestion.tt-is-under-cursor a {
+    color: #fff;
+}
+
+.tt-suggestion p {
+    margin: 0;
+}
+
+.tt-suggestion.tt-is-under-cursor p.typeahead-name span {
+  color: #fefefe;
+}
+
+.tt-suggestion.tt-is-under-cursor p.typeahead-name {
+  color: #fff;
+}
+
+.typeahead-name span {
+  float:right;
+  font-size: 0.7em;
+  color: #777;
+}
+
+.typeahead-name {
+  float:right;
+  font-size: 1em;
+  font-weight: bold;
+  color: #000;
+  float:left;
+  min-width: 290px;
+}
+
+.typeahead-description {
+  font-size: 0.8em;
+}
+
+.meteorBox {
+  line-height:32px; 
+  font-family:'Georgia', serif; 
+  margin:12px 0 12px; 
+  display:inline-table; 
+  width:100%
+}
+
+.setWell {
+  margin-bottom:0; 
+  height:160px; 
+  overflow:hidden
+}
+
+.well {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table.table-bordered .progress {
+  margin: 0;
+}
+
+.hljs {
+  display:inline-block;
+}
+
+.wysiwyg-color-black {
+  color: black;
+}
+
+.wysiwyg-color-silver {
+  color: silver;
+}
+
+.wysiwyg-color-gray {
+  color: gray;
+}
+
+.wysiwyg-color-white {
+  color: white;
+}
+
+.wysiwyg-color-maroon {
+  color: maroon;
+}
+
+.wysiwyg-color-red {
+  color: red;
+}
+
+.wysiwyg-color-purple {
+  color: purple;
+}
+
+.wysiwyg-color-fuchsia {
+  color: fuchsia;
+}
+
+.wysiwyg-color-green {
+  color: green;
+}
+
+.wysiwyg-color-lime {
+  color: lime;
+}
+
+.wysiwyg-color-olive {
+  color: olive;
+}
+
+.wysiwyg-color-yellow {
+  color: yellow;
+}
+
+.wysiwyg-color-navy {
+  color: navy;
+}
+
+.wysiwyg-color-blue {
+  color: blue;
+}
+
+.wysiwyg-color-teal {
+  color: teal;
+}
+
+.wysiwyg-color-aqua {
+  color: aqua;
+}
+
+.wysiwyg-color-orange {
+  color: orange;
+}
