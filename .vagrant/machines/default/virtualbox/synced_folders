@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/wamp/www/wwwcetaws/we3-thmcards-vg","disabled":false},"/tmp/vagrant-puppet-3/manifests":{"owner":"root","guestpath":"/tmp/vagrant-puppet-3/manifests","hostpath":"C:/wamp/www/wwwcetaws/we3-thmcards-vg/puppet/manifests","disabled":false}}}
