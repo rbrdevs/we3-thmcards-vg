@@ -40,7 +40,7 @@ class thmcards {
 
   exec { "install-nodedeps":
     cwd => "$base_path",
-    command => "/usr/bin/npm install",
+    command => "/usr/bin/npm install --no-bin-links",
     user => "vagrant"
   }
 
