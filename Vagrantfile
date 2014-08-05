@@ -46,13 +46,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  # config.vm.provider "virtualbox" do |vb|
+   config.vm.provider "virtualbox" do |vb|
   #   # Don't boot with headless mode
   #   vb.gui = true
   #
-  #   # Use VBoxManage to customize the VM. For example to change memory:
-  #   vb.customize ["modifyvm", :id, "--memory", "1024"]
-  # end
+     # Use VBoxManage to customize the VM. For example to change memory:
+     vb.customize ["modifyvm", :id, "--memory", "1024"]
+     vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant", "1"]
+   end
   #
   # View the documentation for the provider you're using for more
   # information on available options.
@@ -68,10 +69,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   pp_manifest_file = "default.pp"
 
 
-config.vm.provision :shell do |shell|
-  shell.inline = "mkdir -p /etc/puppet/modules;
-                  puppet module install puppetlabs/nodejs"
-end
+  config.vm.provision :shell do |shell|
+    shell.inline = "sudo apt-get update -y;
+                    sudo apt-get install -y apt-transport-https;
+                    curl -sL https://deb.nodesource.com/setup | sudo bash -;
+                    sudo apt-get install -y nodejs"
+  end
+
+
+  config.vm.provision :hosts do |provisioner|
+    provisioner.add_host '10.20.1.2', ['we3-thmcards-vg-dev.internal']
+  end
 
   config.vm.define "we3-thmcards-vg", primary: true do |dev|
     dev.vm.hostname = "we3-thmcards-vg"
@@ -89,6 +97,8 @@ end
     dev.vm.network :private_network, :ip => '10.20.1.2'
     # CouchDB
     dev.vm.network "forwarded_port", guest: 5984, host: 5984
+    # THMcards
+    dev.vm.network "forwarded_port", guest: 3000, host: 3000     
   end
 
 
