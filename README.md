@@ -8,6 +8,7 @@ Install
 ----------------------
 
 $ vagrant up
+
 $ vagrant ssh
 
 Follow instructions.
